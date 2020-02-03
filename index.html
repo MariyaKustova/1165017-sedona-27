@@ -137,45 +137,62 @@
           предложения гостиниц в седоне
         </p>
         <button type="button">ПОИСК ГОСТИНИЦЫ В седоне</button>
-        
+
         <form action="https://echo.htmlacademy.ru" method="POST">
-          <label for="arrival-date">Дата заезда:</label>
-          <input
-            id="arrival-date"
-            type="date"
-            name="arrival-date"
-            placeholder="2017-04-24"
-          />
-          <label for="date-departure">Дата выезда:</label>
-          <input
-            id="date-departure"
-            type="date"
-            name="date-departure"
-            placeholder="2017-07-04"
-          />
-          <div class="number-adult-guests">
-            <h3 class="visually-hidden">Колличество взрослых гостей</h3>
+          <p class="date-visit">
+            <label for="arrival-date">Дата заезда:</label>
+            <input
+              class="date-input"
+              id="arrival-date"
+              type="date"
+              name="arrival-date"
+              value="2017-04-24"
+            />
+          </p>
+          <p class="date-visit">
+            <label for="date-departure">Дата выезда:</label>
+            <input
+              class="date-input"
+              id="date-departure"
+              type="date"
+              name="date-departure"
+              value="2017-07-04"
+            />
+          </p>
+          <div class="number-guests">
+            <h3 class="visually-hidden">Количество взрослых гостей</h3>
             <label for="adults">Взрослые:</label>
-            <button class="add-subtract-guests" id="adults" type="button" name="add-guest">
+            <button class="button-guests" type="button" name="add-guest">
               +
             </button>
-            <p class="number-guests">2</p>
-            <button class="add-subtract-guests" id="adults" type="button" name="subtract-guest">
+            <input
+              class="number-guests"
+              id="adults"
+              name="number-adults-guests"
+              value="2"
+            />
+            <button class="button-guests" type="button" name="subtract-guest">
               -
             </button>
           </div>
-          <div class="number-children">
+
+          <div class="number-guests">
             <h3 class="visually-hidden">Колличество детей</h3>
             <label for="children">Дети:</label>
-            <button class="add-subtract-guests" id="children" type="button" name="add-guest">
+            <button class="button-guests" type="button" name="add-guest">
               +
             </button>
-            <p class="number-guests">2</p>
-            <button class="add-subtract-guests" id="children" type="button" name="subtract-guest">
+            <input
+              class="number-guests"
+              id="children"
+              name="number-adults-guests"
+              value="0"
+            />
+            <button class="button-guests" type="button" name="subtract-guest">
               -
             </button>
           </div>
-          <button type="submit">Найти</button>
+          <button class="search-options" type="submit">Найти</button>
         </form>
 
         <img
@@ -225,13 +242,14 @@
 
       <div>
         <p>Website by</p>
-      <a href="https://htmlacademy.ru/intensive/htmlcss"
-        ><img
-          src="img/general/logo-htmla.svg"
-          width="115"
-          height="41"
-          alt="logotip htmlacademy"
-      /></a>
+        <a href="https://htmlacademy.ru/intensive/htmlcss"
+          ><img
+            src="img/general/logo-htmla.svg"
+            width="115"
+            height="41"
+            alt="logotip htmlacademy"
+        /></a>
       </div>
     </footer>
-    
+  </body>
+</html>

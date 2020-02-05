@@ -3,11 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Седона</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic"
+      rel="stylesheet"
+    />
+    <link href="./css/normalize.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
   </head>
   <body>
     <header>
       <nav class="main-navigation">
-        <ul>
+        <ul class="navigation-list">
           <li><a href="information.html">Информация</a></li>
           <li><a href="gallery.html">Фото и видео</a></li>
           <li><a href="map.html">Карта штата</a></li>
@@ -21,6 +27,7 @@
           height="71"
           alt="logo-city-of-sedona"
       /></a>
+
       <div class="welcome-block">
         <h1 class="welcom-text">
           <img
@@ -30,16 +37,18 @@
             alt="Welcome to the Sedona"
           />
         </h1>
+        <!-- <img src="img/index/polygon.jpg" alt="Декоративная кривая"> -->
       </div>
     </header>
 
-    <main class="container">
-      <section>
+    <main>
+      <section class="city-advantages">
         <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+
         <ul class="list-reasons">
-          <li class="reason">
-            <div class="reason-text">
+          <li>
+            <div class="reason-text reason-text-blue">
               <h3>Настоящий городок</h3>
               <p class="reason-num">— №1 —</p>
               <p class="reason-text">
@@ -52,41 +61,44 @@
               height="256"
               alt="photo-city"
             />
+
             <ul class="list-advantages">
               <li class="advantage">
-                <h3>Жильё</h3>
                 <img
                   src="img/index/icon-1.svg"
                   width="75"
                   height="72"
                   alt="house-icon"
                 />
+                <h3>Жильё</h3>
                 <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
               </li>
               <li class="advantage">
-                <h3>Еда</h3>
                 <img
                   src="img/index/icon-2.svg"
                   width="74"
                   height="70"
                   alt="food-icon"
                 />
-                <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+                <h3>Еда</h3>
+                <p>
+                  Всегда заказывайте фирменный бургер, вы не разочаруетесь!
+                </p>
               </li>
               <li class="advantage">
-                <h3>Сувениры</h3>
                 <img
                   src="img/index/icon-3.svg"
                   width="64"
                   height="76"
                   alt="gift-icon"
                 />
+                <h3>Сувениры</h3>
                 <p>Не только китайского, но и местного производства!</p>
               </li>
             </ul>
           </li>
-          <li class="reason">
-            <div class="reason-text">
+          <li>
+            <div class="reason-text reason-text-blue">
               <h3>Там есть Мост дьявола</h3>
               <p class="reason-num">— №2 —</p>
               <p class="reason-text">
@@ -100,8 +112,8 @@
               alt="photo-bridge-devil"
             />
           </li>
-          <li class="reason">
-            <div class="reason-text">
+          <li>
+            <div class="reason-text reason-text-light">
               <h3>НЕБОЛЬШАЯ ПЛОЩАДЬ</h3>
               <p class="reason-num">— №3 —</p>
               <p class="reason-text">
@@ -109,8 +121,8 @@
               </p>
             </div>
           </li>
-          <li class="reason">
-            <div class="reason-text">
+          <li>
+            <div class="reason-text reason-text-light">
               <h3>КРАСИВАЯ ДОРОГА</h3>
               <p class="reason-num">— №4 —</p>
               <p class="reason-text">
@@ -118,8 +130,8 @@
               </p>
             </div>
           </li>
-          <li class="reason">
-            <div class="reason-text">
+          <li>
+            <div class="reason-text reason-text-light">
               <h3>МАЛО ТУРИСТОВ</h3>
               <p class="reason-num">— №5 —</p>
               <p class="reason-text">
@@ -130,16 +142,22 @@
         </ul>
       </section>
 
-      <section>
+      <section class="reservation">
         <h2>Заинтересовались?</h2>
         <p>
           Укажите предполагаемые даты поездки, и мы покажем вам лучшие
           предложения гостиниц в седоне
         </p>
-        <button type="button">ПОИСК ГОСТИНИЦЫ В седоне</button>
+        <button class="button button-brown" type="button">
+          ПОИСК ГОСТИНИЦЫ В седоне
+        </button>
 
-        <form action="https://echo.htmlacademy.ru" method="POST">
-          <p class="date-visit">
+        <form
+          class="form-reservation"
+          action="https://echo.htmlacademy.ru"
+          method="POST"
+        >
+          <p>
             <label for="arrival-date">Дата заезда:</label>
             <input
               class="date-input"
@@ -149,7 +167,7 @@
               value="2017-04-24"
             />
           </p>
-          <p class="date-visit">
+          <p>
             <label for="date-departure">Дата выезда:</label>
             <input
               class="date-input"
@@ -166,7 +184,7 @@
               +
             </button>
             <input
-              class="number-guests"
+              class="number-guests-input"
               id="adults"
               name="number-adults-guests"
               value="2"
@@ -183,7 +201,7 @@
               +
             </button>
             <input
-              class="number-guests"
+              class="number-guests-input"
               id="children"
               name="number-adults-guests"
               value="0"
@@ -192,59 +210,61 @@
               -
             </button>
           </div>
-          <button class="search-options" type="submit">Найти</button>
+          <button class="button search-options" type="submit">Найти</button>
         </form>
 
         <img
           src="img/index/map.jpg"
           width="1200"
           height="594"
-          alt="map-sedona"
+          alt="Карта Седоны"
         />
       </section>
     </main>
 
-    <footer>
-      <p>
+    <footer class="main-footer">
+      <p class="contacts">
         #visitSEDONA<br />
         Тел: +7(495) 666-02-66
       </p>
 
-      <ul class="contacts">
-        <li>
-          <a href="#"
-            ><img
-              src="img/general/tw-icon.svg"
-              width="17"
-              height="15"
-              alt="Twitter"
-          /></a>
-        </li>
-        <li>
-          <a href="#"
-            ><img
-              src="img/general/fb-icon.svg"
-              width="12"
-              height="22"
-              alt="Facebook"
-          /></a>
-        </li>
-        <li>
-          <a href="#"
-            ><img
-              src="img/general/youtube-icon.svg"
-              width="20"
-              height="16"
-              alt="Youtube"
-          /></a>
-        </li>
-      </ul>
+      <div class="social-contacts">
+        <ul>
+          <li>
+            <a href="#"
+              ><img
+                src="img/general/tw-icon.svg"
+                width="17"
+                height="15"
+                alt="Twitter"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="img/general/fb-icon.svg"
+                width="12"
+                height="22"
+                alt="Facebook"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="img/general/youtube-icon.svg"
+                width="20"
+                height="16"
+                alt="Youtube"
+            /></a>
+          </li>
+        </ul>
+      </div>
 
-      <div>
+      <div class="HTMLa">
         <p>Website by</p>
         <a href="https://htmlacademy.ru/intensive/htmlcss"
           ><img
-            src="img/general/logo-htmla.svg"
+            src="./img/general/logo-htmla.svg"
             width="115"
             height="41"
             alt="logotip htmlacademy"

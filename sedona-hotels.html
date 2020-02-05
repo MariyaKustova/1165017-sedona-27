@@ -3,15 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Седона</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic"
+      rel="stylesheet"
+    />
+    <link href="./css/normalize.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
   </head>
   <body>
     <header>
       <nav class="main-navigation">
-        <ul>
+        <ul class="navigation-list">
           <li><a href="information.html">Информация</a></li>
           <li><a href="gallery.html">Фото и видео</a></li>
           <li><a href="map.html">Карта штата</a></li>
-          <li class="current-page"><a>ГОСТИНИЦЫ</a></li>
+          <li><a class="current" href="sedona-hotels.html">Гостиницы</a></li>
         </ul>
       </nav>
       <a href="index.html"
@@ -26,7 +32,7 @@
     <main class="container">
       <h1 class="visually-hidden">Cписок отелей в Седоне</h1>
 
-      <form action="https://echo.htmlacademy.ru" method="get">
+      <form class="selection-form" action="https://echo.htmlacademy.ru" method="get">
         <fieldset>
           <legend>Инфраструктура:</legend>
           <ul class="list-option">
@@ -71,23 +77,26 @@
         <fieldset>
           <legend>Стоимость в сутки (Р):</legend>
           <p>
-            <input type="text" placeholder="от 0" name="minimum-price" />
-            <input type="text" placeholder="до 3000" name="maximum-price" />
+            <input  class="cost" type="text" placeholder="ОТ 0" name="minimum-price" />
+            <input class="cost" type="text" placeholder="ДО 3000" name="maximum-price" />
+          </p>
+          <p>
+            <input class="range" type="range" min="0" max="3000" step="50">
           </p>
         </fieldset>
-        <button type="submit">Показать</button>
+        <button class="button button-form" type="submit">Показать</button>
       </form>
 
       <div class="searching-results">
         <h3>Найдено: 3</h3>
         <h4>Сортировка:</h4>
         <ul class="search-criteria">
-          <li class="criterion-current">По цене</li>
-          <li class="criterion">По типу</li>
-          <li class="criterion">По рейтингу</li>
+          <li>По цене</li>
+          <li>По типу</li>
+          <li>По рейтингу</li>
         </ul>
         <div class="sorting">
-          <button type="button">
+          <button class="sorting-button" type="button">
             <img
               src="img/general/icon-up-dir.svg"
               width="11"
@@ -95,7 +104,7 @@
               alt="icon-up-dir"
             />
           </button>
-          <button type="button">
+          <button class="sorting-button" type="button">
             <img
               src="img/general/icon-down-dir.svg"
               width="11"
@@ -123,8 +132,8 @@
                 <span class="type-hotel">Гостиница</span>
                 <b>От 4000 Р.</b>
                 <div class="control">
-                  <a href="#">Подробнее</a>
-                  <button type="button">Забронировать</button>
+                  <a class="button button-details" href="#">Подробнее</a>
+                  <button class="button-reservation" type="button">Забронировать</button>
                 </div>
               </div>
               <div class="rate-hotel">
@@ -161,8 +170,8 @@
                 <span class="type-hotel">Мотель</span>
                 <b>От 3000 Р.</b>
                 <div class="control">
-                  <a href="#">Подробнее</a>
-                  <button type="button">Забронировать</button>
+                  <a class="button button-details" href="#">Подробнее</a>
+                  <button class="button-reservation" type="button">Забронировать</button>
                 </div>
               </div>
               <div class="rate-hotel">
@@ -196,8 +205,8 @@
                 <span class="type-hotel">Апартаменты</span>
                 <b>От 2000 Р.</b>
                 <div class="control">
-                  <a href="#">Подробнее</a>
-                  <button type="button">Забронировать</button>
+                  <a class="button button-details" href="#">Подробнее</a>
+                  <button class="button-reservation" type="button">Забронировать</button>
                 </div>
               </div>
               <div class="rate-hotel">
@@ -217,47 +226,49 @@
       </section>
     </main>
 
-    <footer>
-      <p>
+    <footer class="main-footer">
+      <p class="contacts">
         #visitSEDONA<br />
         Тел: +7(495) 666-02-66
       </p>
 
-      <ul class="contacts">
-        <li>
-          <a href="#"
-            ><img
-              src="img/general/tw-icon.svg"
-              width="17"
-              height="15"
-              alt="Twitter"
-          /></a>
-        </li>
-        <li>
-          <a href="#"
-            ><img
-              src="img/general/fb-icon.svg"
-              width="12"
-              height="22"
-              alt="Facebook"
-          /></a>
-        </li>
-        <li>
-          <a href="#"
-            ><img
-              src="img/general/youtube-icon.svg"
-              width="20"
-              height="16"
-              alt="Youtube"
-          /></a>
-        </li>
-      </ul>
+      <div class="social-contacts">
+        <ul>
+          <li>
+            <a href="#"
+              ><img
+                src="img/general/tw-icon.svg"
+                width="17"
+                height="15"
+                alt="Twitter"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="img/general/fb-icon.svg"
+                width="12"
+                height="22"
+                alt="Facebook"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="img/general/youtube-icon.svg"
+                width="20"
+                height="16"
+                alt="Youtube"
+            /></a>
+          </li>
+        </ul>
+      </div>
 
-      <div>
+      <div class="HTMLa">
         <p>Website by</p>
         <a href="https://htmlacademy.ru/intensive/htmlcss"
           ><img
-            src="img/general/logo-htmla.svg"
+            src="./img/general/logo-htmla.svg"
             width="115"
             height="41"
             alt="logotip htmlacademy"

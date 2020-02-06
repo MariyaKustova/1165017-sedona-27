@@ -10,12 +10,21 @@ body {
     color: #000000;
     text-transform: uppercase;
 
-    background-color: #ffffff;
-    box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
-
-    width: 1200px;
+    background-color: #f2f2f2;
+     
 }
 
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px ;
+}
+
+.wrapper-shadow{
+    box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
+    background-color: #ffffff;
+}
 a {
     text-decoration: none;
 }
@@ -30,12 +39,9 @@ a {
 
     background-color: #81b3d2;
     border: none;
+    outline: none;
 }
-.button:hover,
-.button:focus,
-.button:active {
-    background-color: #0c89f0;
-}
+
 /* Стилизация header */
 
 .main-navigation {
@@ -43,10 +49,13 @@ a {
 
     line-height: 26px;
     font-weight: 700 ;
+    
 }
 
 .navigation-list {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .navigation-list a {
@@ -56,16 +65,21 @@ a {
 
 .navigation-list a:hover,
 .navigation-list a:focus {
-    background-color: #0c89f0;
+    color: #81b3d2;
+}
+
+.navigation-list a:active {
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .welcome-block {
     background-color: #1313146b;
     background-image: url('../img/index/background-photo.jpg');
-    background-position: 0 0;
+    background-position: center 0;
     background-repeat: no-repeat;
+    background-size: cover;
 
-    width: 1200px;
+    width: 100%;
     height: 773px;
 }
 
@@ -108,8 +122,8 @@ a {
 .reason-text-blue {
     color: #ffffff;
     background-color: #81b3d2;
-    width: 400px;
-    height: 256px;
+    /* width: 400px;
+    height: 256px; */
 }
 
 .list-advantages li{
@@ -131,8 +145,8 @@ a {
 .reason-text-light {
     color: #000000;
     background-color: #eeeeee;
-    width: 400px;
-    height: 256px;
+    /* width: 400px;
+    height: 256px; */
 }
 
 .reservation {
@@ -154,14 +168,22 @@ a {
     font-weight: bold;
     line-height: 26px;
 
-    width: 568px;
-    height: 86px;
     background-color: #766357;
 }
 
+.button-brown:hover,
+.button-brown:focus {
+    background-color: #604e43;
+}
+
+.button-brown:active {
+    background-color: #503e33;
+    color: rgba(255, 255, 255, 0.3);
+}
+
 .form-reservation {
-    width: 568px;
-    height: 395px;
+    /* width: 568px;
+    height: 395px; */
     background-color: #ffffff;
     box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
 
@@ -175,47 +197,84 @@ a {
 }
 
 .form-reservation .date-input {
-    font-weight: bold;
-
-    width: 346px;
-    height: 38px;
-
-    background-color:#f2f2f2;
     border: none;
+    background-color:#f2f2f2;
+
+    font-weight: bold;
+}
+
+.form-reservation .date-input:hover {
+    background-color: #ebebeb;
+}
+
+.form-reservation .date-input:focus {
+    border: solid 2px #e5e5e5;
+    background-color: #ffffff;
+}
+
+.form-reservation .date-input:active {
+    border: solid 2px #e5e5e5;
+    background-color: #ffffff;
 }
 
 .button-guests,
 .number-guests-input {
     text-align: center;
     padding: 0;
-    width: 38px;
-    height: 38px;
     border: none;
     background-color: #f2f2f2
+}
+
+.button-guests {
+    color: #cacaca;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.button-guests:hover,
+.button-guests:focus {
+    color: #000000;
+}
+
+.button-guests:active {
+    color: #81b3d2;
 }
 
 .button.search-options {
     font-size: 21px;
     line-height: 26px;
     font-weight: bold;
+    background-color: #81b3d2;
+}
 
-    width: 458px;
-    height: 58px;
+.button.search-options:hover,
+.button.search-options:focus {
+    background-color: #669ec0;
+}
+
+.button.search-options:active {
+    background-color: #5496bd;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.map-sedona {
+    width: 100%;
 }
 /* Стили для внутренней страницы */
 
-.navigation-list .current{
+.navigation-list .current {
     color: #766357;
 }
 
 .selection-form {
     background-color: #1313146b;
     background-image: url('../img/sedona-hotels/filter-background.jpg');
-    background-position: 0 0;
+    background-position: center center;
     background-repeat: no-repeat;
 
     color: #ffffff;
     line-height: 21px;
+    width: 100%;
 }
 
 .selection-form fieldset{
@@ -232,11 +291,6 @@ a {
     border: 1px solid #ffffff;
 }
 
-.option label:hover,
-.option label:focus {
-    color: #0c89f0;
-}
-
 .selection-form legend{
     font-size: 16px;
     font-weight: bold;
@@ -247,22 +301,19 @@ a {
     text-align: center;
     background-color: transparent;
     border: 2px solid #ffffff;
-    width: 157px;
-    height: 32px;
+    border-radius: 3px;
 }
 
-/* .range {
-    width: 317px;
-    height: 2px;
-    opacity: 0.3;
-    background-color: #ffffff;
-} */
-
 .button-form {
-    width: 133px;
-    height: 32px;
     border: solid 2px #ffffff;
     background-color: transparent;
+    border-radius: 3px;
+}
+
+.button-form:hover,
+.button-form:focus {
+    background-color: #ffffff;
+    color: #000000;
 }
 
 .searching-results {
@@ -280,31 +331,33 @@ a {
     list-style: none;
 }
 
-.search-criteria li {
+.criteria-button {
     color: rgba(0, 0, 0, 0.3);
+    border: none; 
+    background-color: #ffffff;
+    text-transform: uppercase;
 }
 
-.search-criteria li:active {
+.criteria-button:hover,
+.criteria-button:focus {
     color: #81b3d2;
 }
 
-.search-criteria li:focus,
-.search-criteria li:hover {
-    color:  #0c89f0;
+.criteria-button:active {
+    color: #000000;
 }
- .sorting-button {
-    background-color: #cacaca;
-    border: none;
- }
 
- .sorting-button:active,
- .sorting-button:focus,
- .sorting-button:hover {
-    background-color: #81b3d2;
- }
+criteria-button.current-position {
+    color: #81b3d2;
+}
+
+.sorting-button {
+    border: none;
+    background-color: #ffffff;
+}
 
  .results ul {
-     list-style: none;     
+    list-style: none;     
  }
 
  .name-hotel {
@@ -313,15 +366,33 @@ a {
      font-weight: bold;
  }  
 
+ .offer-description a:hover,
+ .offer-description a:focus {
+    color: #81b3d2;
+ }
+
+ .offer-description a:active {
+    color: rgba(0, 0, 0, 0.3);
+ }
+
+ .offer-description h2 {
+     color: #000000;
+ }
+ 
  .type-hotel,
  .offer-description b {
      line-height: 21px;
      font-weight: 400;
  }
 
- .button-details {
-     width: 110px;
-     height: 27px;
+ .button-details:hover,
+ .button-details:focus {
+    background-color: #669ec0;
+ }
+
+ .button-details:active {
+    background-color: #5496bd;
+    color: rgba(255, 255, 255, 0.3);
  }
 
  .button-reservation {
@@ -330,14 +401,17 @@ a {
      color: #ffffff;
      font-weight: bold ;
      text-align: center;
-     width: 142px;
-     height: 27px;
- }
+     outline: none;
+}
 
  .button-reservation:hover,
  .button-reservation:focus {
-    background-color: #0c89f0;
-    color:  #ffffff;
+    background-color: #604e43;
+ }
+
+ .button-reservation:active {
+    background-color: #503e33;
+    color: rgba(255, 255, 255, 0.3);
  }
 
 .rating {
@@ -346,8 +420,8 @@ a {
     text-align: center;
     vertical-align: middle;
     background-color: #f2f2f2;
-    width: 110px;
-    height: 27px;
+    /* width: 110px;
+    height: 27px; */
 }
 .result-item {
     padding: 0;
@@ -358,8 +432,7 @@ a {
 /* Стили для footer */
 
 .main-footer {
-    width: 1200px;
-    height: 120px;
+    width: 100%;
     background-color: #f2f2f2;
     opacity: 0.9;
 }
@@ -368,7 +441,8 @@ a {
     font-size: 21px;
     font-weight: bold;
     line-height: 26px;
-    text-align: center;
+    text-align: left;
+    margin: 0;
 }
 
 .social-contacts{
@@ -381,15 +455,19 @@ a {
 }
 
 .social-contacts li {
-    width: 46px;
-    height: 48px;
+    /* width: 46px;
+    height: 48px; */
     background-color:#81b3d2;
     text-align: center;    
 }
 
 .social-contacts li:hover,
 .social-contacts li:focus{
-    background-color: #0c89f0;
+    background-color: #669ec0;
+}
+
+.social-contacts li:focus{
+    background-color: #5496bd;
 }
 
 .HTMLa {
@@ -400,5 +478,9 @@ a {
 
 .HTMLa a:hover,
 .HTMLa:focus {
-    background-color: #0c89f0;
+    color: #81b3d2;
+}
+
+.HTMLa:focus {
+    color: #bdbbbc;
 }

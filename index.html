@@ -11,6 +11,8 @@
     <link href="./css/style.css" rel="stylesheet" />
   </head>
   <body>
+    <div class="wrapper">
+      <div class="wrapper-shadow">
     <header>
       <nav class="main-navigation">
         <ul class="navigation-list">
@@ -37,7 +39,6 @@
             alt="Welcome to the Sedona"
           />
         </h1>
-        <!-- <img src="img/index/polygon.jpg" alt="Декоративная кривая"> -->
       </div>
     </header>
 
@@ -162,26 +163,28 @@
             <input
               class="date-input"
               id="arrival-date"
-              type="date"
+              type="text"
               name="arrival-date"
               value="2017-04-24"
             />
+            <img src="./img/index/calendar.svg" alt="Календарь">
           </p>
           <p>
             <label for="date-departure">Дата выезда:</label>
             <input
               class="date-input"
               id="date-departure"
-              type="date"
+              type="text"
               name="date-departure"
               value="2017-07-04"
             />
+            <img src="./img/index/calendar.svg" alt="Календарь">
           </p>
           <div class="number-guests">
             <h3 class="visually-hidden">Количество взрослых гостей</h3>
             <label for="adults">Взрослые:</label>
             <button class="button-guests" type="button" name="add-guest">
-              +
+              -
             </button>
             <input
               class="number-guests-input"
@@ -190,7 +193,7 @@
               value="2"
             />
             <button class="button-guests" type="button" name="subtract-guest">
-              -
+              +
             </button>
           </div>
 
@@ -198,7 +201,7 @@
             <h3 class="visually-hidden">Колличество детей</h3>
             <label for="children">Дети:</label>
             <button class="button-guests" type="button" name="add-guest">
-              +
+              -
             </button>
             <input
               class="number-guests-input"
@@ -207,18 +210,14 @@
               value="0"
             />
             <button class="button-guests" type="button" name="subtract-guest">
-              -
+              +
             </button>
           </div>
           <button class="button search-options" type="submit">Найти</button>
         </form>
-
-        <img
-          src="img/index/map.jpg"
-          width="1200"
-          height="594"
-          alt="Карта Седоны"
-        />
+        <div class="map-sedona">
+          <img src="img/index/map.jpg" alt="Карта Седоны" />
+        </div>
       </section>
     </main>
 
@@ -271,5 +270,7 @@
         /></a>
       </div>
     </footer>
+  </div>
+  </div>
   </body>
 </html>

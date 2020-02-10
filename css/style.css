@@ -42,6 +42,121 @@ a {
     outline: none;
 }
 
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+/* ----Стили для сетки---- */
+
+.header {
+    position: relative;
+}
+
+.navigation-list {
+    width: 100%;
+    min-height: 56px;
+    
+    display: flex;
+}
+
+.navigation-list li {
+    width: 239px;
+    text-align: center;
+}
+
+.navigation-list li:nth-child(3) {
+    margin-left: auto;
+}
+
+.main-navigation + a {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.introduction {
+    width: 489px;
+    min-height: 56px;
+    margin: 0 auto;
+}
+
+.shell {
+    margin-bottom: 57px;
+}
+
+.block-text-photo {
+    display: flex;
+}
+
+.block-text-photo.reverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.list-advantages {
+    padding: 0;
+    display: flex;
+}
+
+.horizontal-block {
+    display: flex;
+}
+
+.inner-content-form {
+    padding: 55px;
+    display: flex;
+    flex-direction: column;
+}
+
+.guest-count {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 54px;
+}
+
+.main-footer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-contacts ul {
+    display: flex;
+}
+
+.HTMLa {
+    display: flex;
+}
+
+.selection-form {
+    display: flex;
+}
+
+.results-search {
+    margin-left: auto;
+}
+
+.searching-results {
+    display: flex;
+}
+
+.search-criteria {
+    display: flex;
+}
+
+.result-item {
+    display: flex;
+}
+
+.rate {
+    display: flex;
+}
 /* Стилизация header */
 
 .main-navigation {
@@ -81,10 +196,17 @@ a {
 
     width: 100%;
     height: 773px;
+
+    position: relative;
 }
 
 .welcome-block h1 {
-    text-align: center;
+    margin: 0;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .city-advantages h2 {
@@ -92,11 +214,15 @@ a {
     line-height: 26px;
     font-weight: bold;
     text-align: center;
+    margin: 0;
+    margin-top: 61px;
+    margin-bottom: 38px;
 }
 
 .city-advantages p {
     line-height: 26px;
     text-align: center;
+    margin: 0;
 }
 
 .list-reasons {
@@ -104,70 +230,96 @@ a {
     padding: 0;
 }
 
-.reason-text{
-    text-align: center;
+.reason {
+    width: 400px;
+    min-height: 256px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
 }
 
-.reason-text h3 {
+.reason-text{
+    text-align: center;
+    margin: 0;
+}
+
+.reason h3 {
     font-size: 21px;
     line-height: 21px;
     font-weight: bold;
     margin: 0;
 }
 
-.reason-text p {
+.reason p {
     line-height: 21px;
 } 
 
-.reason-text-blue {
+.reason.reason-text-blue {
     color: #ffffff;
     background-color: #81b3d2;
-    /* width: 400px;
-    height: 256px; */
+}
+.reason.reason-text-light {
+    background-color: #eeeeee;    
 }
 
-.list-advantages li{
-    list-style: none;
+.reason-num {
+    margin: 0;
 }
 
 .advantage {
     line-height: 21px;
     text-align: center; 
 
-    color: #000000;   
+    width: 400px;
+    min-height: 330px;
 }
 
 .advantage h3 {
     font-size: 21px;
     font-weight: bold;
+    margin: 0;
 }
 
-.reason-text-light {
-    color: #000000;
-    background-color: #eeeeee;
-    /* width: 400px;
-    height: 256px; */
+.advantage p {
+    margin: 0;
 }
 
-.reservation {
+.interesting-block {
+    width: 568px;
+    margin: 0 auto;
     text-align: center;
 }
 
-.reservation h2 {
+.interesting-block h2 {
     font-size: 30px;
     line-height: 36px;
     font-weight: bold;
+    margin: 0;
+    margin-bottom: 26px;
 }
 
-.reservation p {
+.interesting-block p {
     line-height: 24px;
+    margin: 0;
+    margin-bottom: 52px;
+}
+
+.block-reservation {
+    width: 568px;
+    min-height: 481px;
+    margin: 0 auto;
+
+    position: relative;
 }
 
 .button-brown {
     font-size: 21px;
     font-weight: bold;
     line-height: 26px;
-
+    width: 100%;
+    padding: 35px;
     background-color: #766357;
 }
 
@@ -182,18 +334,17 @@ a {
 }
 
 .form-reservation {
-    /* width: 568px;
-    height: 395px; */
+    width: 100%;
     background-color: #ffffff;
     box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
 
     line-height: 26px;
     font-weight: bold;
-    text-align: center;
 }
 
 .form-reservation p {
-    margin: 0;
+    margin-bottom: 30px;
+    margin-top: 0;
 }
 
 .form-reservation .date-input {
@@ -201,6 +352,8 @@ a {
     background-color:#f2f2f2;
 
     font-weight: bold;
+    width: auto;
+    padding: 14px;
 }
 
 .form-reservation .date-input:hover {
@@ -217,18 +370,32 @@ a {
     background-color: #ffffff;
 }
 
+.inner-content-form label {
+    margin-right: 21px;
+}
+
+.number-guests {
+    margin: 0;
+}
+
 .button-guests,
 .number-guests-input {
     text-align: center;
     padding: 0;
     border: none;
-    background-color: #f2f2f2
+    background-color: #f2f2f2;
+
+    width: 38px;
+    height: 38px;
 }
 
 .button-guests {
     color: #cacaca;
     font-size: 18px;
     font-weight: bold;
+
+    width: 38px;
+    height: 38px;
 }
 
 .button-guests:hover,
@@ -245,6 +412,7 @@ a {
     line-height: 26px;
     font-weight: bold;
     background-color: #81b3d2;
+    padding: 20px;
 }
 
 .button.search-options:hover,
@@ -259,6 +427,11 @@ a {
 
 .map-sedona {
     width: 100%;
+
+    /* position: absolute;
+    top: 86px;
+    right: 316px; */
+
 }
 /* Стили для внутренней страницы */
 
@@ -275,14 +448,18 @@ a {
     color: #ffffff;
     line-height: 21px;
     width: 100%;
+    
 }
 
 .selection-form fieldset{
     border: none;
+    
 }
 
 .list-option {
     list-style: none;
+    padding: 0;
+
 }
 
 .option [type="checkbox"] {
@@ -320,15 +497,28 @@ a {
     font-size: 12px;
     line-height: 18px;
     border-bottom: 1px solid #cacaca;
+    min-height: 86px;
 }
 .searching-results h3 {
     font-size: 21px;
     font-weight: bold;
     line-height: 26px;
+    margin: auto 0;
 }
 
+.searching-results h4 {
+    margin: auto 0;
+} 
 .search-criteria {
     list-style: none;
+    padding: 0;
+    margin: auto 0;
+}
+
+.sorting{
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .criteria-button {
@@ -357,8 +547,13 @@ criteria-button.current-position {
 }
 
  .results ul {
-    list-style: none;     
+    list-style: none;  
+    padding: 0;   
  }
+
+.rate-hotel {
+    margin-left: auto;
+}
 
  .name-hotel {
      font-size: 21px;
@@ -435,6 +630,7 @@ criteria-button.current-position {
     width: 100%;
     background-color: #f2f2f2;
     opacity: 0.9;
+    padding: 36px 0;
 }
 
 .contacts {
@@ -452,11 +648,13 @@ criteria-button.current-position {
 .social-contacts ul {
     list-style: none;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 .social-contacts li {
-    /* width: 46px;
-    height: 48px; */
+    width: 46px;
+    height: 48px;
     background-color:#81b3d2;
     text-align: center;    
 }
@@ -473,7 +671,10 @@ criteria-button.current-position {
 .HTMLa {
     text-align: center;
     line-height: 26px;
+}
 
+.HTMLa p {
+    margin: 8px 8px;
 }
 
 .HTMLa a:hover,

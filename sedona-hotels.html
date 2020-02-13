@@ -109,7 +109,7 @@
             <div class="results-search">
               <fieldset>
                 <legend>Стоимость в сутки (Р):</legend>
-                <p>
+                <p class="cost-day">
                   <input
                     class="cost"
                     type="text"
@@ -123,15 +123,22 @@
                     name="maximum-price"
                   />
                 </p>
-                <p>
-                  <input
-                    class="range"
-                    type="range"
-                    min="0"
-                    max="3000"
-                    step="50"
-                  />
-                </p>
+                <div class="range">
+                  <span class="visually-hidden">Линия выбора стоимости</span>
+                  <div class="white-line">
+                    <div class="range-line"></div>
+                    <svg class="filter-button1" xmlns="http://www.w3.org/2000/svg" width="20" height="23" viewBox="0 0 20 23">
+                      <path fill="#ABABAB" d="M10 20C4.477 20 0 15.522 0 10v2c0 5.522 4.477 10 10 10 5.522 0 10-4.478 10-10v-2c0 5.522-4.478 10-10 10z" opacity=".3"/>
+                      <circle cx="10" cy="10" r="10" fill="#FFF"/>
+                      <circle cx="10" cy="10" r="2" fill="#ABABAB"/>
+                    </svg>
+                    <svg class="filter-button2" xmlns="http://www.w3.org/2000/svg" width="20" height="23" viewBox="0 0 20 23">
+                      <path fill="#ABABAB" d="M10 20C4.477 20 0 15.522 0 10v2c0 5.522 4.477 10 10 10 5.522 0 10-4.478 10-10v-2c0 5.522-4.478 10-10 10z" opacity=".3"/>
+                      <circle cx="10" cy="10" r="10" fill="#FFF"/>
+                      <circle cx="10" cy="10" r="2" fill="#ABABAB"/>
+                    </svg>
+                  </div>
+                </div>
               </fieldset>
               <button class="button button-form" type="submit">Показать</button>
             </div>
@@ -199,8 +206,10 @@
                     <a href="#"
                       ><h2 class="name-hotel">Amara Resort & Spa</h2></a
                     >
-                    <span class="type-hotel">Гостиница</span>
-                    <b>От 4000 Р.</b>
+                    <div class="type-price">
+                      <span class="type-hotel">Гостиница</span>
+                      <b>От 4000 Р.</b>
+                    </div>
                     <div class="control">
                       <a class="button button-details" href="#">Подробнее</a>
                       <button class="button button-reservation" type="button">
@@ -239,8 +248,10 @@
                   </div>
                   <div class="offer-description">
                     <a href="#"><h2 class="name-hotel">Desert Quail Inn</h2></a>
+                    <div class="type-price">
                     <span class="type-hotel">Мотель</span>
                     <b>От 3000 Р.</b>
+                  </div>
                     <div class="control">
                       <a class="button button-details" href="#">Подробнее</a>
                       <button class="button button-reservation" type="button">
@@ -278,8 +289,10 @@
                     <a href="#"
                       ><h2 class="name-hotel">Villas at Poco Diablo</h2></a
                     >
+                    <div class="type-price">
                     <span class="type-hotel">Апартаменты</span>
                     <b>От 2000 Р.</b>
+                    </div>
                     <div class="control">
                       <a class="button button-details" href="#">Подробнее</a>
                       <button class="button button-reservation" type="button">

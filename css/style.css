@@ -133,6 +133,11 @@ input [type="radio"].visually-hidden {
   display: flex;
 }
 
+.results-search {
+  display: flex;
+  flex-direction: column;
+}
+
 .searching-results {
   display: flex;
 }
@@ -141,12 +146,32 @@ input [type="radio"].visually-hidden {
   display: flex;
 }
 
+.cost-day {
+  display: flex;
+}
+
 .result-item {
+  display: flex;
+}
+
+.offer-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.type-price {
   display: flex;
 }
 
 .control {
   display: flex;
+  justify-content: space-between;
+}
+
+.rate-hotel {
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
@@ -539,7 +564,7 @@ input [type="radio"].visually-hidden {
 .selection-form,
 .searching-results,
 .result-item {
-  padding: 0 73px;
+  padding: 30px 73px;
   box-sizing: border-box;
 }
 
@@ -552,12 +577,11 @@ input [type="radio"].visually-hidden {
   color: #ffffff;
   line-height: 21px;
   width: 100%;
+  min-height: 217px;
 }
 
 .selection-form fieldset {
   border: none;
-  margin-top: 31px;
-  margin-bottom: 31px;
   margin-right: 115px;
   padding: 0;
 }
@@ -582,15 +606,21 @@ input [type="radio"].visually-hidden {
 .list-option {
   list-style: none;
   padding: 0;
+  margin-bottom: 0;
 }
 
 /* .option [type="checkbox"] {
+
   color: #ffffff;
   background-color: transparent;
   border: 1px solid #ffffff;
   
   margin-bottom: 23px;
 } */
+
+.list-option .option:not(:last-child) {
+  margin-bottom: 23px;
+}
 
 .option svg{
   position: absolute;
@@ -601,7 +631,11 @@ input [type="radio"].visually-hidden {
 .selection-form legend {
   font-size: 16px;
   font-weight: bold;
+  text-align: left;
+}
 
+.cost-day {
+  margin-bottom: 22px;
 }
 
 .cost {
@@ -610,6 +644,45 @@ input [type="radio"].visually-hidden {
   background-color: transparent;
   border: 2px solid #ffffff;
   border-radius: 3px;
+
+  padding-top: 6px;
+  padding-bottom: 6px;
+
+  width: 157px;
+
+  box-sizing: border-box;
+}
+
+.white-line {
+  width: 248px;
+  height: 2px;
+  background-color: #ffffff;
+
+  position: absolute;
+}
+
+.range-line {
+  width: 317px;
+  height: 2px;
+  opacity: 0.3;
+  background-color: #ffffff;
+
+  position: relative;
+}
+
+.filter-button1,
+.filter-button2 {
+  position: absolute;
+
+  bottom: -12px;
+}
+
+.filter-button1 {
+  left: 0;
+}
+
+.filter-button2 {
+  left: 238px;
 }
 
 .button-form {
@@ -620,8 +693,9 @@ input [type="radio"].visually-hidden {
   width: 133px;
 
   padding-top: 3px;
-  padding-bottom: 2px;
-  margin-bottom: 31px;  
+  padding-bottom: 2px; 
+  margin: auto auto;
+  margin-bottom: 0;
 }
 
 .button-form:hover,
@@ -641,10 +715,12 @@ input [type="radio"].visually-hidden {
   font-weight: bold;
   line-height: 26px;
   margin: auto 0;
+  margin-right: 49px;
 }
 
 .searching-results h4 {
   margin: auto 0;
+  margin-right: 43px;
 }
 .search-criteria {
   list-style: none;
@@ -664,7 +740,9 @@ input [type="radio"].visually-hidden {
   border-bottom: 1px dotted rgba(0,0,0,0.3);
   background-color: #ffffff;
   text-transform: uppercase;
-  outline: none;
+  padding: 0;
+  margin-right: 33px;
+
 }
 
 .criteria-button:hover,
@@ -718,7 +796,10 @@ criteria-button.current-position {
   color: #000000;
 
   margin: 0;
-  margin-bottom: 14px;
+}
+
+.type-hotel {
+  width: 116px;
 }
 
 .type-hotel,
@@ -728,7 +809,6 @@ criteria-button.current-position {
 }
 
 .control {
-  margin-top: 19px;
   bottom: 0;
 }
 
@@ -739,7 +819,7 @@ criteria-button.current-position {
 .button-details,
 .button-reservation {
   line-height: 21px;
-  padding: 8px 17px;
+  padding: 3px 17px;
 }
 
 .button-reservation {
@@ -771,16 +851,8 @@ criteria-button.current-position {
   min-height: 90px;
 }
 
-.photo-hotel,
-.offer-description {
-  padding-top: 30px;
-  padding-right: 30px;
-  padding-bottom: 30px;
-}
-
 .rate-hotel {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  
 }
 
 .rating {
@@ -789,7 +861,7 @@ criteria-button.current-position {
   text-align: center;
   vertical-align: middle;
   background-color: #f2f2f2;
-  
+  margin: 0;
 }
 
 .icon-up-dir,
@@ -817,6 +889,10 @@ criteria-button.current-position {
   width: 100%;
 }
 
+.photo-hotel {
+  margin-right: 30px;
+}
+
 /* Стили для footer */
 
 .main-footer {
@@ -840,7 +916,7 @@ criteria-button.current-position {
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
-  text-align: left;
+  text-align: center;
   margin: 0;
 }
 

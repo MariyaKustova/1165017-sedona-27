@@ -68,19 +68,6 @@ input [type="radio"].visually-hidden {
   flex-wrap: wrap;
 }
 
-.main-navigation + a {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-}
-
-.introduction {
-  width: 489px;
-  margin: 61px auto 56px;
-}
-
 .block-text-photo {
   display: flex;
 }
@@ -185,6 +172,14 @@ input [type="radio"].visually-hidden {
   font-weight: 700;
 }
 
+.main-navigation + a {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
 .navigation-list {
   list-style: none;
   margin: 0;
@@ -220,13 +215,15 @@ input [type="radio"].visually-hidden {
   
   background-image: 
   url("../img/index/background-photo.jpg");
-  background-position: center 0;
+  background-position: center -83px;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #1313146b;
 
   width: 100%;
-  height: 773px;
+  height: 508px;
+
+  margin-bottom: 61px;
 
   position: relative;
 }
@@ -238,7 +235,7 @@ input [type="radio"].visually-hidden {
   background-repeat: no-repeat;
 
   width: 100%;
-  height: 59px;
+  height: 58px;
 
   position: absolute;
   bottom:0;
@@ -253,13 +250,21 @@ input [type="radio"].visually-hidden {
   transform: translate(-50%, -50%);
 }
 
+.introduction {
+  width: 489px;
+  margin: 0 auto 51px;
+}
+
+.shell {
+  margin-bottom: 47px;}
+
 .city-advantages h2 {
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
   text-align: center;
   margin: 0;
-  margin-bottom: 38px;
+  margin-bottom: 26px;
 }
 
 .city-advantages p {
@@ -277,12 +282,7 @@ input [type="radio"].visually-hidden {
   min-height: 256px;
   box-sizing: border-box;
 
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 50px auto 65px;
+  padding: 47px 49px 39px;
 }
 
 .reason-text {
@@ -295,10 +295,13 @@ input [type="radio"].visually-hidden {
   line-height: 21px;
   font-weight: bold;
   margin: 0;
+  margin-bottom: 24px;
+  text-align: center;
 }
 
 .reason p {
   line-height: 21px;
+  margin-bottom: 20px;
 }
 
 .reason.reason-text-blue {
@@ -307,10 +310,7 @@ input [type="radio"].visually-hidden {
 }
 .reason.reason-text-light {
   background-color: #eeeeee;
-}
-
-.reason-num {
-  margin: 32px;
+  padding: 47px 69px 41px;
 }
 
 .photo {
@@ -345,8 +345,9 @@ input [type="radio"].visually-hidden {
   line-height: 21px;
   text-align: center;
 
-  width: 400px;
   min-height: 330px;
+
+  padding: 60px 55px 82px;
 }
 
 .advantage:first-child::before {
@@ -358,6 +359,9 @@ input [type="radio"].visually-hidden {
 
   width: 75px;
   height: 72px;
+
+  display: block;
+  margin: 0 auto 28px;
 }
 
 .advantage:nth-child(2)::before {
@@ -369,6 +373,9 @@ input [type="radio"].visually-hidden {
 
   width: 74px;
   height: 70px;
+
+  display: block;
+  margin: 0 auto 30px;
 }
 
 .advantage:nth-child(3)::before {
@@ -380,12 +387,16 @@ input [type="radio"].visually-hidden {
 
   width: 64px;
   height: 76px;
+
+  display: block;
+  margin: 0 auto 25px;
+  position: relative;
+  bottom: 5px;
 }
 
 .advantage h3 {
   font-size: 21px;
   font-weight: bold;
-  margin: 32px;
 }
 
 .advantage p {
@@ -402,14 +413,13 @@ input [type="radio"].visually-hidden {
   font-size: 30px;
   line-height: 36px;
   font-weight: bold;
-  margin-top: 57px;
   margin-bottom: 26px;
 }
 
 .interesting-block p {
   line-height: 24px;
   margin: 0;
-  margin-bottom: 52px;
+  margin-bottom: 45px;
 }
 
 .block-reservation {
@@ -425,7 +435,7 @@ input [type="radio"].visually-hidden {
   font-weight: bold;
   line-height: 26px;
   width: 100%;
-  padding: 35px;
+  padding: 30px;
   background-color: #766357;
 }
 
@@ -453,6 +463,9 @@ input [type="radio"].visually-hidden {
 .form-reservation label {
   font-size: 14px;
   line-height: 26px;
+  position: relative;
+  top: 8px;
+  left: 1px;
 }
 
 .guest-count label {
@@ -479,6 +492,7 @@ input [type="radio"].visually-hidden {
   padding-left: 12px;
   padding-right: 30px;
   box-sizing: border-box;
+  text-transform: uppercase;
 }
 
 .form-reservation .date-input:hover {
@@ -549,7 +563,7 @@ input [type="radio"].visually-hidden {
   line-height: 26px;
   font-weight: bold;
   background-color: #81b3d2;
-  padding: 20px;
+  padding: 16px;
 }
 
 .button.search-options:hover,
@@ -576,7 +590,7 @@ input [type="radio"].visually-hidden {
 .selection-form,
 .searching-results,
 .result-item {
-  padding: 30px 73px;
+  padding: 28px 70px;
   box-sizing: border-box;
 }
 
@@ -648,12 +662,12 @@ input [type="radio"].visually-hidden {
 }
 
 .results-search legend {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .cost-day {
   margin-bottom: 22px;
-  height: 32px;
+  height: 34px;
   box-sizing: border-box;
   border: 2px solid #ffffff;
   border-radius: 3px;
@@ -681,7 +695,7 @@ input [type="radio"].visually-hidden {
     text-align: left;
     cursor: pointer;
     width: 90px;
-    padding: 0 0 0 65px;
+    padding: 0 0 0 68px;
 }
 
 .cost {
@@ -738,7 +752,7 @@ input [type="radio"].visually-hidden {
 }
 
 .range-toggle-max {
-  left: 80%;
+  left: 79%;
 }
 
 
@@ -749,10 +763,9 @@ input [type="radio"].visually-hidden {
 
   width: 133px;
 
-  padding-top: 3px;
-  padding-bottom: 2px; 
-  margin: auto auto;
-  margin-bottom: 0;
+  padding-top: 5px;
+  padding-bottom: 5px; 
+  margin: 0 auto;
 }
 
 .button-form:hover,
@@ -952,7 +965,7 @@ input [type="radio"].visually-hidden {
 
 .main-footer {
   width: 100%;
-  padding: 36px 0;
+  padding: 28px 0;
   position: absolute;
   bottom: 0;
   opacity: 0.9;
@@ -969,14 +982,18 @@ input [type="radio"].visually-hidden {
 
 .contacts {
   font-size: 21px;
-  font-weight: bold;
-  line-height: 26px;
-  text-align: center;
-  margin: 0;
+    font-weight: bold;
+    line-height: 34px;
+    margin: 0;
+    position: relative;
+    left: 17px;
 }
 
 .social-contacts {
   text-align: center;
+  position: relative;
+  top: 9px;
+  right: 18px;
 }
 
 .social-contacts ul {
@@ -1046,7 +1063,15 @@ input [type="radio"].visually-hidden {
 }
 
 .HTMLa p {
-  margin: 8px 8px;
+  position: relative;
+  top: 6px;
+  left: -2px;
+}
+
+.HTMLa a {
+  position: relative;
+  top: 13px;
+  left: 6px;
 }
 
 .icon-HTMLa {

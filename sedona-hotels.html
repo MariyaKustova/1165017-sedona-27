@@ -109,36 +109,28 @@
             <div class="results-search">
               <fieldset>
                 <legend>Стоимость в сутки (Р):</legend>
-                <p class="cost-day">
-                  <input
+                <div class="cost-day">
+                  <label class="min-price">ОТ<input
                     class="cost"
-                    type="text"
-                    placeholder="ОТ 0"
+                    type="number"
+                    value="0"
                     name="minimum-price"
-                  />
-                  <input
+                  /></label>
+                  <label class="max-price">ДО<input
                     class="cost"
-                    type="text"
-                    placeholder="ДО 3000"
+                    type="number"
+                    value="3000"
                     name="maximum-price"
-                  />
-                </p>
-                <div class="range">
-                  <span class="visually-hidden">Линия выбора стоимости</span>
-                  <div class="white-line">
-                    <div class="range-line"></div>
-                    <svg class="filter-button1" xmlns="http://www.w3.org/2000/svg" width="20" height="23" viewBox="0 0 20 23">
-                      <path fill="#ABABAB" d="M10 20C4.477 20 0 15.522 0 10v2c0 5.522 4.477 10 10 10 5.522 0 10-4.478 10-10v-2c0 5.522-4.478 10-10 10z" opacity=".3"/>
-                      <circle cx="10" cy="10" r="10" fill="#FFF"/>
-                      <circle cx="10" cy="10" r="2" fill="#ABABAB"/>
-                    </svg>
-                    <svg class="filter-button2" xmlns="http://www.w3.org/2000/svg" width="20" height="23" viewBox="0 0 20 23">
-                      <path fill="#ABABAB" d="M10 20C4.477 20 0 15.522 0 10v2c0 5.522 4.477 10 10 10 5.522 0 10-4.478 10-10v-2c0 5.522-4.478 10-10 10z" opacity=".3"/>
-                      <circle cx="10" cy="10" r="10" fill="#FFF"/>
-                      <circle cx="10" cy="10" r="2" fill="#ABABAB"/>
-                    </svg>
-                  </div>
+                  /></label>
                 </div>
+                <div class="range-controls">
+                  <span class="visually-hidden">Линия выбора стоимости</span>
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="range-toggle range-toggle-min"></div>
+                  <div class="range-toggle range-toggle-max"></div>
+                  </div>
               </fieldset>
               <button class="button button-form" type="submit">Показать</button>
             </div>

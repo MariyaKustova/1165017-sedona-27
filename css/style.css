@@ -39,6 +39,8 @@ a {
   background-color: #81b3d2;
   border: none;
   outline: none;
+
+  cursor: pointer;
 }
 
 .visually-hidden{
@@ -573,11 +575,25 @@ a {
   color: rgba(255, 255, 255, 0.3);
 }
 
+.close-form {
+  display: none;
+}
+
 .map-sedona {
   width: 100%;
 
   position: relative;
 }
+
+.map-sedona iframe {
+  width: 100%;
+  min-height: 594px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 /* Стили для внутренней страницы */
 
 .navigation-list .current {
@@ -1043,6 +1059,8 @@ li.star:not(:last-child) {
 
   background-color: #81b3d2;
   text-align: center;
+
+  cursor: pointer;
 }
 
 .social-contacts li:last-child {

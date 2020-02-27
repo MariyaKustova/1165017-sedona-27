@@ -152,15 +152,17 @@
           </section>
 
           <section class="reservation">
-            <div class="interesting-block">
-              <h2>Заинтересовались?</h2>
-              <p>
-                Укажите предполагаемые даты поездки, <br />
-                и мы покажем вам лучшие предложения гостиниц в седоне
-              </p>
-              <button class="button button-brown" type="button">
-                ПОИСК ГОСТИНИЦЫ В седоне
-              </button>
+            <div class="interesting-block-wrap">
+              <div class="interesting-block">
+                <h2>Заинтересовались?</h2>
+                <p>
+                  Укажите предполагаемые даты поездки, <br />
+                  и мы покажем вам лучшие предложения гостиниц в седоне
+                </p>
+                <button class="button button-brown" type="button">
+                  ПОИСК ГОСТИНИЦЫ В седоне
+                </button>
+              </div>
             </div>
             <div class="block-reservation">
               <form
@@ -176,8 +178,10 @@
                     type="text"
                     name="arrival-date"
                     value="24 апреля 2017"
+                    required
                   />
-                  <svg class="icon-calendar"
+                  <svg
+                    class="icon-calendar"
                     xmlns="http://www.w3.org/2000/svg"
                     width="21"
                     height="22"
@@ -199,8 +203,10 @@
                     type="text"
                     name="date-departure"
                     value="4 июля 2017"
+                    required
                   />
-                  <svg class="icon-calendar"
+                  <svg
+                    class="icon-calendar"
                     xmlns="http://www.w3.org/2000/svg"
                     width="21"
                     height="22"
@@ -231,6 +237,7 @@
                       class="number-guests-input"
                       id="adults"
                       name="number-adults-guests"
+                      required
                     />
                     <button
                       class="button-guests"
@@ -255,6 +262,7 @@
                       class="number-guests-input"
                       id="children"
                       name="number-children-guests"
+                      required
                     />
                     <button
                       class="button-guests"
@@ -291,7 +299,8 @@
                     <li>
                       <a href="#">
                         <span class="visually-hidden">Твиттер</span>
-                        <svg class="icon-social-contacts icon-twitter"
+                        <svg
+                          class="icon-social-contacts icon-twitter"
                           xmlns="http://www.w3.org/2000/svg"
                           xmlns:xlink="http://www.w3.org/1999/xlink"
                           width="17"
@@ -308,7 +317,8 @@
                     <li>
                       <a href="#">
                         <span class="visually-hidden">Фейсбук</span>
-                        <svg class="icon-social-contacts icon-facebook"
+                        <svg
+                          class="icon-social-contacts icon-facebook"
                           xmlns="http://www.w3.org/2000/svg"
                           width="12"
                           height="22"
@@ -324,7 +334,8 @@
                     <li>
                       <a href="#">
                         <span class="visually-hidden">Ютуб</span>
-                        <svg class="icon-social-contacts icon-youtube"
+                        <svg
+                          class="icon-social-contacts icon-youtube"
                           xmlns="http://www.w3.org/2000/svg"
                           xmlns:xlink="http://www.w3.org/1999/xlink"
                           width="20"
@@ -345,7 +356,8 @@
                   <p>Website by</p>
                   <a href="https://htmlacademy.ru/intensive/htmlcss">
                     <span class="visually-hidden">HTMLacademy</span>
-                    <svg class="icon-HTMLa"
+                    <svg
+                      class="icon-HTMLa"
                       xmlns="http://www.w3.org/2000/svg"
                       data-name="Layer 1"
                       viewBox="0 0 113 39"

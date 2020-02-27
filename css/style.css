@@ -43,7 +43,7 @@ a {
   cursor: pointer;
 }
 
-.visually-hidden{
+.visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
   width: 1px;
@@ -92,13 +92,18 @@ a {
   box-sizing: border-box;
 }
 
+.form-reservation p {
+  display: flex;
+  justify-content: space-between;
+}
+
 .guest-count {
   display: flex;
   justify-content: space-between;
 
   margin-bottom: 54px;
 }
-.number-guests{
+.number-guests {
   display: flex;
 }
 
@@ -198,7 +203,7 @@ a {
   color: black;
   display: block;
   box-sizing: border-box;
-  padding: 15px 0;  
+  padding: 15px 0;
 }
 
 .navigation-list a:hover,
@@ -211,9 +216,7 @@ a {
 }
 
 .welcome-block {
-  
-  background-image: 
-  url("../img/index/background-photo.jpg");
+  background-image: url("../img/index/background-photo.jpg");
   background-position: center -83px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -237,7 +240,7 @@ a {
   height: 58px;
 
   position: absolute;
-  bottom:0;
+  bottom: 0;
 }
 
 .welcome-block h1 {
@@ -255,7 +258,8 @@ a {
 }
 
 .shell {
-  margin-bottom: 47px;}
+  margin-bottom: 47px;
+}
 
 .city-advantages h2 {
   font-size: 21px;
@@ -317,8 +321,7 @@ a {
 }
 
 .photo-city {
-  background-image: 
-  url("../img/index/feature-picture.jpg");
+  background-image: url("../img/index/feature-picture.jpg");
   background-position: center 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -329,8 +332,7 @@ a {
 }
 
 .photo-bridge-devil {
-  background-image: 
-  url("../img/index/bridge.jpg");
+  background-image: url("../img/index/bridge.jpg");
   background-position: center 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -427,7 +429,6 @@ a {
 
   position: relative;
   z-index: 1;
-
 }
 
 .button-brown {
@@ -476,9 +477,6 @@ a {
   margin-bottom: 30px;
   margin-top: 0;
   position: relative;
-
-  display: flex;
-  justify-content: space-between;
 }
 
 .form-reservation .date-input {
@@ -579,26 +577,52 @@ a {
 .close-form {
   display: none;
 
-  /* animation: form-appear 0.6s; */
+  animation: form-appear 1s;
 }
 
-/* @keyframes form-appear {
-  0%{
-    transform: translateY(-100px);
+@keyframes form-appear {
+  0% {
+    transform: translateY(-2000px);
   }
 
-  70%{
+  70% {
     transform: translateY(30px);
   }
 
-  90%{
-    transform: translateY(10px);
+  90% {
+    transform: translateY(-10px);
   }
 
-  100%{
-    transform: translateY(100px);
+  100% {
+    transform: translateY(0);
   }
-} */
+}
+
+.modal-error {
+  animation: shake 1s;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
 
 .map-sedona {
   width: 100%;
@@ -654,7 +678,7 @@ a {
   padding-left: 40px;
   padding-top: 3px;
   padding-bottom: 7px;
-  
+
   position: relative;
 
   cursor: pointer;
@@ -675,7 +699,7 @@ a {
   position: relative;
 }
 
-.list-option [type="checkbox"]~.checkbox-indicator {
+.list-option [type="checkbox"] ~ .checkbox-indicator {
   display: block;
   width: 20px;
   height: 20px;
@@ -688,11 +712,11 @@ a {
   left: 0;
 }
 
-.list-option [type="checkbox"]:disabled~.checkbox-indicator {
+.list-option [type="checkbox"]:disabled ~ .checkbox-indicator {
   border-color: #6a6a6a;
 }
 
-.list-option [type="checkbox"]:checked~.checkbox-indicator::before {
+.list-option [type="checkbox"]:checked ~ .checkbox-indicator::before {
   content: "";
 
   position: absolute;
@@ -705,10 +729,8 @@ a {
   border: 4px solid #ffffff;
   border-top-width: 0;
   border-right-width: 0;
-  
 
   transform: rotate(-45deg);
-
 }
 
 .list-option .option:not(:last-child) {
@@ -732,7 +754,7 @@ a {
   box-sizing: border-box;
   border: 2px solid #ffffff;
   border-radius: 3px;
-  font-size: 0;  
+  font-size: 0;
   position: relative;
 }
 
@@ -748,15 +770,14 @@ a {
   left: 157px;
 }
 
-
 .cost-day label {
   display: inline-block;
-    font-size: 14px;
-    line-height: 29px;
-    text-align: left;
-    cursor: pointer;
-    width: 90px;
-    padding: 0 0 0 68px;
+  font-size: 14px;
+  line-height: 29px;
+  text-align: left;
+  cursor: pointer;
+  width: 90px;
+  padding: 0 0 0 68px;
 }
 
 .cost {
@@ -793,7 +814,7 @@ a {
 .range-toggle {
   position: absolute;
   top: -9px;
-  
+
   width: 4px;
   height: 4px;
 
@@ -818,7 +839,6 @@ a {
   left: 79%;
 }
 
-
 .button-form {
   border: solid 2px #ffffff;
   background-color: transparent;
@@ -827,7 +847,7 @@ a {
   width: 133px;
 
   padding-top: 5px;
-  padding-bottom: 5px; 
+  padding-bottom: 5px;
   margin: 0 auto;
 }
 
@@ -870,25 +890,22 @@ a {
 .criteria-button {
   color: rgba(0, 0, 0, 0.3);
   border: none;
-  border-bottom: 1px dotted rgba(0,0,0,0.3);
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
   background-color: #ffffff;
   text-transform: uppercase;
   padding: 0;
   margin-right: 33px;
-
 }
 
 .criteria-button:hover,
 .criteria-button:focus {
   color: #81b3d2;
   border-bottom: 1px dotted #81b3d2;
-
 }
 
 .criteria-button:active {
   color: #000000;
-  border:none;
-  
+  border: none;
 }
 
 .criteria-button.current-position {
@@ -905,7 +922,7 @@ a {
 .results ul {
   list-style: none;
   padding: 0;
-  margin: 0
+  margin: 0;
 }
 
 .rate-hotel {
@@ -1002,22 +1019,26 @@ li.star:not(:last-child) {
 
 .icon-up-dir,
 .icon-down-dir {
-    width: 11px;
-    height: 10px;
-    fill: #cacaca;
-    
+  width: 11px;
+  height: 10px;
+  fill: #cacaca;
 }
 
 .icon-up-dir:hover,
 .icon-down-dir:hover,
 .icon-up-dir:focus,
 .icon-down-dir:focus {
-    fill: #000000;
+  fill: #000000;
 }
 
 .icon-up-dir:active,
 .icon-down-dir:active {
-    fill: #81b3d2;
+  fill: #81b3d2;
+}
+
+.icon-up-dir.current,
+.icon-down-dir.current {
+  fill: #81b3d2;
 }
 
 .result-item {
@@ -1041,20 +1062,17 @@ li.star:not(:last-child) {
 }
 
 .inner-page .main-footer {
-    width: 100%;
-    opacity: 0.9;
-    padding: 36px 0;
-    position: static;
-    
-  }
+  padding: 36px 0;
+  position: static;
+}
 
 .contacts {
   font-size: 21px;
-    font-weight: bold;
-    line-height: 34px;
-    margin: 0;
-    position: relative;
-    left: 17px;
+  font-weight: bold;
+  line-height: 34px;
+  margin: 0;
+  position: relative;
+  left: 17px;
 }
 
 .social-contacts {

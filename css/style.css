@@ -634,6 +634,10 @@ label.children-guests {
   position: relative;
 }
 
+.map {
+   position: relative;
+}
+
 .map-sedona iframe {
   width: 100%;
   min-height: 594px;
@@ -1067,6 +1071,7 @@ li.star:not(:last-child) {
   width: 100%;
   padding: 28px 0;
   position: absolute;
+  z-index: 2;
   bottom: 0;
   opacity: 0.9;
   background-color: #ffffff;

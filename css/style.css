@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: "PT Sans", "Aria", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
 
   font-size: 14px;
   color: #000000;
@@ -14,13 +14,13 @@ body {
 }
 
 .wrapper {
-  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 40px;
 }
 
 .wrapper-shadow {
+  width: 100%;
   box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
   background-color: #ffffff;
 }
@@ -634,15 +634,12 @@ label.children-guests {
   position: relative;
 }
 
-.map {
-   position: relative;
-}
-
 .map-sedona iframe {
   width: 100%;
   min-height: 594px;
 
   position: absolute;
+
   top: 0;
   left: 0;
 }
@@ -1073,7 +1070,6 @@ li.star:not(:last-child) {
   position: absolute;
   z-index: 2;
   bottom: 0;
-  opacity: 0.9;
   background-color: #ffffff;
 }
 

@@ -17,15 +17,15 @@
         <header>
           <nav class="main-navigation">
             <ul class="navigation-list">
-              <li><a href="information.html">Информация</a></li>
-              <li><a href="gallery.html">Фото и видео</a></li>
-              <li><a href="map.html">Карта штата</a></li>
-              <li>
+              <li class="left-side"><a href="information.html">Информация</a></li>
+              <li class="left-side"><a href="gallery.html">Фото и видео</a></li>
+              <li class="right-side"><a href="map.html">Карта штата</a></li>
+              <li class="right-side">
                 <a href="sedona-hotels.html" class="current">Гостиницы</a>
               </li>
             </ul>
           </nav>
-          <a href="index.html"
+          <a href="index.html"  class="big-logo"
             ><img
               src="img/general/logo.svg"
               width="140"
@@ -278,17 +278,20 @@
         </main>
 
         <footer class="main-footer">
-          <p class="contacts">
-            #visitSEDONA<br />
-            Тел: +7(495) 666-02-66
-          </p>
+          <div class="footer-block contacts-block">
+            <p class="contacts">
+              #visitSEDONA<br />
+              Тел: +7(495) 666-02-66
+            </p>
+          </div>
 
-          <div class="social-contacts">
+          <div class="footer-block social-contacts">
             <ul>
               <li>
                 <a href="#">
                   <span class="visually-hidden">Твиттер</span>
-                  <svg class="icon-social-contacts icon-twitter"
+                  <svg
+                    class="icon-social-contacts icon-twitter"
                     xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink"
                     width="17"
@@ -305,7 +308,8 @@
               <li>
                 <a href="#">
                   <span class="visually-hidden">Фейсбук</span>
-                  <svg class="icon-social-contacts icon-facebook"
+                  <svg
+                    class="icon-social-contacts icon-facebook"
                     xmlns="http://www.w3.org/2000/svg"
                     width="12"
                     height="22"
@@ -321,7 +325,8 @@
               <li>
                 <a href="#">
                   <span class="visually-hidden">Ютуб</span>
-                  <svg class="icon-social-contacts icon-youtube"
+                  <svg
+                    class="icon-social-contacts icon-youtube"
                     xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink"
                     width="20"
@@ -338,11 +343,12 @@
             </ul>
           </div>
 
-          <div class="HTMLa">
+          <div class="footer-block HTMLa">
             <p>Website by</p>
             <a href="https://htmlacademy.ru/intensive/htmlcss">
               <span class="visually-hidden">HTMLacademy</span>
-              <svg class="icon-HTMLa"
+              <svg
+                class="icon-HTMLa"
                 xmlns="http://www.w3.org/2000/svg"
                 data-name="Layer 1"
                 viewBox="0 0 113 39"

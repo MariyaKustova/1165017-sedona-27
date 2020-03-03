@@ -17,6 +17,8 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 40px;
+
+  position: relative;
 }
 
 .wrapper-shadow {
@@ -24,6 +26,7 @@ body {
   box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
   background-color: #ffffff;
 }
+
 a {
   text-decoration: none;
 }
@@ -57,120 +60,6 @@ a {
   overflow: hidden;
 }
 
-/* ----Стили для сетки---- */
-
-.navigation-list {
-  width: 100%;
-  min-height: 56px;
-
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.block-text-photo {
-  display: flex;
-}
-
-.block-text-photo.reverse {
-  display: flex;
-  flex-direction: row-reverse;
-}
-
-.list-advantages {
-  padding: 0;
-  display: flex;
-}
-
-.horizontal-block {
-  display: flex;
-  position: relative;
-  z-index: 2;
-}
-
-.form-reservation {
-  
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-}
-
-.form-reservation p {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.guest-count {
-  display: flex;
-  justify-content: space-between;
-
-  margin-bottom: 54px;
-}
-.number-guests {
-  display: flex;
-  align-items: center;
-}
-
-.main-footer {
-  display: flex;
-  justify-content: space-around;
-}
-
-.social-contacts ul {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.HTMLa {
-  display: flex;
-}
-
-.selection-form {
-  display: flex;
-}
-
-.results-search {
-  display: flex;
-  flex-direction: column;
-}
-
-.searching-results {
-  display: flex;
-}
-
-.search-criteria {
-  display: flex;
-}
-
-.result-item {
-  display: flex;
-}
-
-.offer-description {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.type-price {
-  display: flex;
-}
-
-.control {
-  display: flex;
-  justify-content: space-between;
-}
-
-.rate-hotel {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.rate {
-  display: flex;
-  justify-content: flex-end;
-}
 /* Стилизация главной страницы */
 
 .main-navigation {
@@ -180,7 +69,7 @@ a {
   font-weight: 700;
 }
 
-.main-navigation + a {
+.big-logo {
   position: absolute;
   top: 0;
   left: 50%;
@@ -189,25 +78,31 @@ a {
 }
 
 .navigation-list {
+  
   list-style: none;
-  margin: 0;
+  margin: 0 70px;
   padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .navigation-list li {
-  width: 239px;
-  text-align: center;
+  padding: 15px 0;
+  flex-grow: 1;
 }
 
-.navigation-list li:nth-child(3) {
-  margin-left: auto;
+.navigation-list li.left-side {
+  text-align: left;
+}
+
+.navigation-list li.right-side {
+  text-align: right;
 }
 
 .navigation-list a {
   color: black;
-  display: block;
   box-sizing: border-box;
-  padding: 15px 0;
 }
 
 .navigation-list a:hover,
@@ -254,6 +149,26 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.block-text-photo {
+  display: flex;
+}
+
+.block-text-photo.reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.list-advantages {
+  padding: 0;
+  display: flex;
+}
+
+.horizontal-block {
+  display: flex;
+  position: relative;
+  z-index: 2;
 }
 
 .introduction {
@@ -479,6 +394,10 @@ a {
 
   transform: translateY(0%);
   transition: all 2s;
+
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
 .form-reservation label {
@@ -497,6 +416,10 @@ label.children-guests {
   margin-bottom: 30px;
   margin-top: 0;
   position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .form-reservation .date-input {
@@ -545,6 +468,17 @@ label.children-guests {
 
 .icon-calendar:active {
   fill: #81b3d2;
+}
+
+.guest-count {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 54px;
+}
+.number-guests {
+  display: flex;
+  align-items: center;
 }
 
 .button-guests,
@@ -628,23 +562,12 @@ label.children-guests {
   }
 }
 
-.map-sedona {
-  width: 100%;
-
-  position: relative;
-}
-
 .map-sedona iframe {
   width: 100%;
   min-height: 594px;
-
-  position: absolute;
-
-  top: 0;
-  left: 0;
 }
 
-/* Стили для внутренней страницы */
+  /* Стили для внутренней страницы */
 
 .navigation-list .current {
   color: #766357;
@@ -667,6 +590,8 @@ label.children-guests {
   line-height: 21px;
   width: 100%;
   min-height: 217px;
+
+  display: flex;
 }
 
 .selection-form fieldset {
@@ -692,6 +617,9 @@ label.children-guests {
 .results-search {
   margin-left: auto;
   text-align: center;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .list-option {
@@ -869,6 +797,8 @@ label.children-guests {
   line-height: 18px;
   border-bottom: 1px solid #cacaca;
   min-height: 86px;
+
+  display: flex;
 }
 .searching-results h3 {
   font-size: 21px;
@@ -887,6 +817,8 @@ label.children-guests {
   list-style: none;
   padding: 0;
   margin: auto 0;
+
+  display: flex;
 }
 
 .search-criteria li {
@@ -939,6 +871,15 @@ label.children-guests {
 
 .rate-hotel {
   margin-left: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rate {
+  display: flex;
+  justify-content: flex-end;
 }
 
 li.star:not(:last-child) {
@@ -978,6 +919,13 @@ li.star:not(:last-child) {
 
 .control {
   bottom: 0;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.type-price {
+  display: flex;
 }
 
 .button-details {
@@ -1017,6 +965,10 @@ li.star:not(:last-child) {
 
 .offer-description {
   min-height: 90px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .rating {
@@ -1056,6 +1008,8 @@ li.star:not(:last-child) {
 .result-item {
   border-bottom: 1px solid #cacaca;
   width: 100%;
+
+  display: flex;
 }
 
 .photo-hotel {
@@ -1067,15 +1021,26 @@ li.star:not(:last-child) {
 .main-footer {
   width: 100%;
   padding: 28px 0;
+
   position: absolute;
-  z-index: 2;
   bottom: 0;
-  background-color: #ffffff;
+  left: 0;
+
+  background-color: rgb(255,255,255,0.9);
+
+  display: flex;
+  justify-content: space-around; 
+}
+
+.footer-block {
+  flex-grow: 1;
+  text-align: center;
+  justify-content: center;
 }
 
 .inner-page .main-footer {
   padding: 36px 0;
-  position: static;
+  position: unset;
 }
 
 .contacts {
@@ -1083,21 +1048,19 @@ li.star:not(:last-child) {
   font-weight: bold;
   line-height: 34px;
   margin: 0;
-  position: relative;
-  left: 17px;
+  display: inline-block;
+  text-align: left
 }
 
 .social-contacts {
-  text-align: center;
-  position: relative;
-  top: 9px;
-  right: 18px;
+  padding-top: 8px;
 }
 
 .social-contacts ul {
   list-style: none;
   text-align: center;
-
+  display: inline-flex;
+ 
   margin: 0;
   padding: 0;
 }
@@ -1170,6 +1133,8 @@ li.star:not(:last-child) {
 .HTMLa {
   text-align: center;
   line-height: 26px;
+
+  display: flex;
 }
 
 .HTMLa p {

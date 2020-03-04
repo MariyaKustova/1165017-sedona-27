@@ -640,7 +640,7 @@ label.children-guests {
   position: relative;
 }
 
-.list-option [type="checkbox"] ~ .checkbox-indicator {
+.list-option [type="checkbox"] ~ .label-checkbox-option .checkbox-indicator {
   display: block;
   width: 20px;
   height: 20px;
@@ -653,11 +653,11 @@ label.children-guests {
   left: 0;
 }
 
-.list-option [type="checkbox"]:disabled ~ .checkbox-indicator {
+.list-option [type="checkbox"]:disabled ~ .label-checkbox-option .checkbox-indicator {
   border-color: #6a6a6a;
 }
 
-.list-option [type="checkbox"]:checked ~ .checkbox-indicator::before {
+.list-option [type="checkbox"]:checked ~ .label-checkbox-option .checkbox-indicator::before {
   content: "";
 
   position: absolute;

@@ -573,6 +573,8 @@ label.children-guests {
 .map-sedona iframe {
   width: 100%;
   min-height: 594px;
+
+  border: 0;
 }
 
   /* Стили для внутренней страницы */

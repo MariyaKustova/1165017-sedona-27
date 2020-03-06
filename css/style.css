@@ -1087,6 +1087,10 @@ li.star:not(:last-child) {
   margin: 0;
 }
 
+.contacts a {
+  color: #000000;
+}
+
 .social-contacts {
   padding-top: 10px;
 

@@ -916,20 +916,21 @@ li.star:not(:last-child) {
   font-weight: bold;
 }
 
-.offer-description a:hover,
-.offer-description a:focus {
-  color: #81b3d2;
-}
-
-.offer-description a:active {
-  color: rgba(0, 0, 0, 0.3);
-}
-
 .offer-description h2 {
   color: #000000;
 
   margin: 0 0 -7px 0;
 }
+
+.offer-description h2:hover,
+.offer-description h2:focus {
+  color: #81b3d2;
+}
+
+.offer-description h2:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 
 .type-hotel {
   width: 116px;
@@ -970,6 +971,7 @@ li.star:not(:last-child) {
 .button-details:hover,
 .button-details:focus {
   background-color: #669ec0;
+  color: #ffffff;
 }
 
 .button-details:active {

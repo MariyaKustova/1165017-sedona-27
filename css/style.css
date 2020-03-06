@@ -1097,7 +1097,7 @@ li.star:not(:last-child) {
   padding: 0;
 }
 
-.social-contacts li {
+.social-contacts-item {
   width: 46px;
   height: 48px;
 
@@ -1109,7 +1109,7 @@ li.star:not(:last-child) {
   cursor: pointer;
 }
 
-.social-contacts li:last-child {
+.social-contacts-item:last-child {
   margin-right: 0;
 }
 
@@ -1128,16 +1128,16 @@ li.star:not(:last-child) {
   margin-left: 80px;
 }
 
-.social-contacts li:hover,
-.social-contacts li:focus {
+.social-contacts-item:hover,
+.social-contacts-item:focus {
   background-color: #669ec0;
 }
 
-.social-contacts li:active {
+.social-contacts-item:active {
   background-color: #5496bd;
 }
 
-.social-contacts li:active .icon-social-contacts,
+.social-contacts-item:active .icon-social-contacts,
 .icon-twitter:active,
 .icon-facebook:active,
 .icon-youtube:active {

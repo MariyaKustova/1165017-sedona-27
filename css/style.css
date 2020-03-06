@@ -898,6 +898,16 @@ li.star:not(:last-child) {
   margin-right: 6px;
 }
 
+.star-rate {
+  display: block;
+  width: 18px;
+  height: 17px;
+  
+  background-image: url("../img/general/star.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
 .name-hotel {
   font-size: 21px;
   line-height: 24px;

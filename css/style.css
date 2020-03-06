@@ -902,7 +902,7 @@ li.star:not(:last-child) {
   display: block;
   width: 18px;
   height: 17px;
-  
+
   background-image: url("../img/general/star.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -1042,7 +1042,7 @@ li.star:not(:last-child) {
 
 .main-footer {
   width: 100%;
-  padding: 28px 0;
+  padding: 26px 0 29px;
 
   position: absolute;
   bottom: 0;
@@ -1069,6 +1069,10 @@ li.star:not(:last-child) {
   display: inline-block;
   text-align: left;
   box-sizing: border-box;  
+}
+
+.contacts p {
+  margin: 0;
 }
 
 .social-contacts {
@@ -1134,6 +1138,7 @@ li.star:not(:last-child) {
 }
 
 .icon-social-contacts {
+  display: block;
   fill: #ffffff;
   position: relative;
 
@@ -1143,7 +1148,12 @@ li.star:not(:last-child) {
   width: 17px;
   height: 15px;
 
-  top: 15px;
+  top: 17px;
+  left: 14px;
+
+  background-image: url("../img/general/tw-icon.svg");
+  background-repeat: no-repeat;
+
 }
 
 .icon-facebook {
@@ -1151,6 +1161,10 @@ li.star:not(:last-child) {
   height: 22px;
 
   top: 13px;
+  left: 16px;
+
+  background-image: url("../img/general/fb-icon.svg");
+  background-repeat: no-repeat;
 }
 
 .icon-youtube {
@@ -1158,6 +1172,10 @@ li.star:not(:last-child) {
   height: 16px;
 
   top: 16px;
+  left: 12px;
+
+  background-image: url("../img/general/youtube-icon.svg");
+  background-repeat: no-repeat;
 }
 
 .HTMLa {

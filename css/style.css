@@ -919,18 +919,43 @@ label.children-guests {
   justify-content: flex-end;
 }
 
-li.star:not(:last-child) {
-  margin-right: 6px;
-}
+.star-four::before {
+  content: "";
+  background-image: url("../img/general/star.svg");
+  background-repeat: repeat;
+  background-position: 0 0;
 
-.star-rate {
-  display: block;
-  width: 18px;
+  width: 73px;
   height: 17px;
 
+  display: block;
+  margin-left: auto;
+}
+
+.star-three::before {
+  content: "";
   background-image: url("../img/general/star.svg");
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: 0 0;
+
+  width: 55px;
+  height: 17px;
+
+  display: block;
+  margin-left: auto;
+}
+
+.star-two::before {
+  content: "";
+  background-image: url("../img/general/star.svg");
+  background-repeat: repeat;
+  background-position: 0 0;
+
+  width: 37px;
+  height: 17px;
+
+  display: block;
+  margin-left: auto;
 }
 
 .name-hotel {

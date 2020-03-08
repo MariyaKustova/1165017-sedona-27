@@ -701,7 +701,7 @@ label.children-guests {
 }
 
 .list-option .option:not(:last-child) {
-  margin-bottom: 23px;
+  margin-bottom: 25px;
 }
 
 .selection-form legend {

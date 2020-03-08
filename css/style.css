@@ -223,7 +223,8 @@ li.right-side a {
   font-size: 21px;
   line-height: 21px;
   font-weight: bold;
-  margin: 0;
+  width: 151px;
+  margin: 0 auto;
   margin-bottom: 24px;
   text-align: center;
 }

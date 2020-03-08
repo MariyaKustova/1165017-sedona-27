@@ -1270,11 +1270,11 @@ label.children-guests {
   fill: #231f20;
 }
 
-.HTMLa a:hover .icon-HTMLa,
-.HTMLa a:focus .icon-HTMLa {
+.HTMLa-link:hover .icon-HTMLa,
+.HTMLa-link:focus .icon-HTMLa {
   fill: #81b3d2;
 }
 
-.icon-HTMLa:active {
+.HTMLa-link:active .icon-HTMLa {
   fill: #bdbbbc;
 }

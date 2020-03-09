@@ -922,10 +922,10 @@ label.children-guests {
 .star-four::before {
   content: "";
   background-image: url("../img/general/star.svg");
-  background-repeat: repeat;
+  background-repeat: space;
   background-position: 0 0;
 
-  width: 73px;
+  width: 89px;
   height: 17px;
 
   display: block;
@@ -935,10 +935,10 @@ label.children-guests {
 .star-three::before {
   content: "";
   background-image: url("../img/general/star.svg");
-  background-repeat: repeat;
+  background-repeat: space;
   background-position: 0 0;
 
-  width: 55px;
+  width: 66px;
   height: 17px;
 
   display: block;
@@ -948,10 +948,10 @@ label.children-guests {
 .star-two::before {
   content: "";
   background-image: url("../img/general/star.svg");
-  background-repeat: repeat;
+  background-repeat: space;
   background-position: 0 0;
 
-  width: 37px;
+  width: 42px;
   height: 17px;
 
   display: block;
